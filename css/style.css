@@ -27,7 +27,7 @@ a:visited{
 
 .card > header{
     background-color: #288088;
-    border-radius: 2px;
+    border-width: 2px;
     border: #45ADAD;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -36,7 +36,9 @@ a:visited{
 }
 
 .pricing{
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
 }
 
 .card{
@@ -65,8 +67,17 @@ a:visited{
         justify-content: space-between;
     }
 
+    body > header {
+        position: sticky;
+        top: 0;
+    }
+
     .pricing{
         flex-direction: row;
+    }
+
+    .card {
+        flex-basis: 250px;
     }
 
     @keyframes slide-in{
@@ -87,6 +98,12 @@ a:visited{
     @media all and (prefers-reduced-motion:reduce){
         header > img {
             animation: none;
+        }
+    }
+
+    @media print{
+        body {
+            background-image: none;
         }
     }
 }
