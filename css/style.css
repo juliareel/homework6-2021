@@ -100,10 +100,39 @@ a:visited{
             animation: none;
         }
     }
+}
 
-    @media print{
-        body {
-            background-image: none;
-        }
+@media print {
+    body, main {
+        background-image: none;
+        background-color: #f1f1f1;
     }
+    #gallery, .gallery {
+        display: none;
+    }
+    header{
+        flex-direction: column;
+    }
+    nav{
+        width: 100%;
+    }
+    .nav_links {
+        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+      }
+    .card{
+        flex-basis: 250px;
+        border: 2px solid #45adad
+    }
+    .pricing{
+        align-items: flex-end;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .pricing li:before { 
+        content: '\1F44D'; 
+    } 
 }
